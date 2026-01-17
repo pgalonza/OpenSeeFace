@@ -1,0 +1,11 @@
+services:
+  openseeface:
+    build:
+      dockerfile: ./Dockerfile
+      context: ./docker
+    devices:
+      - /dev/video0:/dev/video0
+    ports:
+      - 11573:11573
+    expose:
+      - 11573
